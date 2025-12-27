@@ -110,13 +110,14 @@ export default function ArticleCard({ article }: ArticleCardProps) {
             </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Login diperlukan</AlertDialogTitle>
+                <AlertDialogTitle>Login Required</AlertDialogTitle>
                 <AlertDialogDescription>
-                  Detail artikel hanya bisa diakses setelah kamu login.
+                  You need to be logged in to read the full article. Please
+                  login to continue.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel>Kembali</AlertDialogCancel>
+                <AlertDialogCancel>Back</AlertDialogCancel>
                 <AlertDialogAction asChild>
                   <Link to="/auth/login">Login</Link>
                 </AlertDialogAction>
