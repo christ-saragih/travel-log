@@ -5,8 +5,8 @@ import { Card } from "@/components/ui/card";
 
 const AuthLayout = () => {
   return (
-    <div className="bg-muted/30 flex min-h-screen w-full items-stretch px-4 md:px-0">
-      <div className="container mx-auto grid flex-1 items-center gap-10 py-10 lg:grid-cols-2">
+    <div className="bg-muted/30 flex min-h-screen w-full items-stretch px-4 md:px-20">
+      <div className="container mx-auto grid flex-1 items-center gap-10 lg:grid-cols-2">
         <div className="hidden lg:block">
           <div className="space-y-8">
             <Link to="/" className="inline-flex items-center gap-3">
