@@ -21,8 +21,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-// import { format } from "date-fns"; // I'll assume date-fns is not installed, so I'll use native Date or install it.
-// Checking package.json... date-fns is NOT in package.json. I'll use native Intl.DateTimeFormat.
 
 interface ArticleCardProps {
   article: Article;

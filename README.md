@@ -13,17 +13,14 @@ A modern web application for sharing and reading travel articles, built with Rea
 ### Styling & UI
 
 - **CSS Framework:** [Tailwind CSS v4](https://tailwindcss.com/)
-- **UI Components:** Built with [Radix UI](https://www.radix-ui.com/) primitives
+- **UI Components:** [Scadcn UI](https://ui.shadcn.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
-- **Utilities:** `clsx`, `tailwind-merge`, `class-variance-authority` (Shadcn UI pattern)
-- **Toast Notifications:** [Sonner](https://sonner.emilkowal.ski/)
 
 ### State Management & Data
 
 - **State Management:** [Zustand](https://github.com/pmndrs/zustand)
 - **Routing:** [React Router DOM v7](https://reactrouter.com/)
 - **HTTP Client:** [Axios](https://axios-http.com/)
-- **Date Handling:** [date-fns](https://date-fns.org/)
 
 ### Forms & Validation
 
