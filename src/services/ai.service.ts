@@ -1,0 +1,49 @@
+import axios from "axios";
+
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const GEMINI_API_URL =
+  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
+
+export const aiService = {
+  async generateArticleContent(
+    title: string,
+    categoryName: string,
+  ): Promise<string> {
+    if (!GEMINI_API_KEY) {
+      throw new Error("Gemini API Key is missing");
+    }
+
+    const prompt = `Write a travel article about "${title}"${categoryName ? ` in the category "${categoryName}"` : ""}. 
+    Make it engaging, informative, and around 100-150 words. 
+    Use markdown formatting for headers and lists.`;
+
+    const response = await axios.post(
+      `${GEMINI_API_URL}?key=${GEMINI_API_KEY}`,
+      {
+        contents: [
+          {
+            parts: [
+              {
+                text: prompt,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      },
+    );
+
+    const generatedText =
+      response.data?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    if (!generatedText) {
+      throw new Error("Failed to generate content");
+    }
+
+    return generatedText;
+  },
+};
