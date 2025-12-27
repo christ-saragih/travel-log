@@ -10,17 +10,14 @@ export const apiClient = axios.create({
 // Interceptor Request: attach Bearer token if available
 apiClient.interceptors.request.use((config) => {
   // Allow callers to override Authorization manually
-  if (config.headers && "Authorization" in config.headers) {
+  if (config.headers?.Authorization) {
     return config;
   }
 
   if (typeof window !== "undefined") {
     const token = localStorage.getItem("token");
     if (token) {
-      config.headers = {
-        ...config.headers,
-        Authorization: `Bearer ${token}`,
-      };
+      config.headers.Authorization = `Bearer ${token}`;
     }
   }
 
