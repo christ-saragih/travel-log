@@ -104,3 +104,4 @@ src/
 - **Responsive Design:** Fully responsive UI using Tailwind CSS.
 - **Form Validation:** Robust form handling with Zod schema validation.
 - **Global State:** Efficient state management using Zustand.
+- **AI Content Generation:** Generate engaging travel article descriptions using Google Gemini AI.
